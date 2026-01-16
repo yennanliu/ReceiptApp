@@ -2,6 +2,47 @@
 
 A simple and elegant Vue 3 web application for managing receipts with in-memory storage.
 
+## Cmd
+
+```bash
+#--------------------
+# install
+#--------------------
+
+/plugin install ralph-loop
+
+
+#--------------------
+# cmd
+#--------------------
+- ralph-loop:ralph-loop - Start Ralph Loop
+- ralph-loop:help - Get help about Ralph Loop
+- ralph-loop:cancel-ralph - Cancel active Ralph Loop
+
+
+
+#--------------------
+# Prompt
+#--------------------
+
+# V1
+ralph-loop
+
+Build a web UI API for Receipt.
+
+# When complete:
+# - no need to setup DB, save in memory is OK
+# - use vue 3 framework, it's a pure FE project (UI)
+# - keep things simple and elegant
+# - README with API docs
+# - Output: <promise>COMPLETE</promise>
+
+
+
+# V2
+ralph-loop:ralph-loop make the UI more fancy, use white + red brown, redesign
+```
+
 ## Features
 
 - ✨ Create, read, update, and delete receipts
