@@ -12,6 +12,16 @@ A simple and elegant Vue 3 web application for managing receipts with in-memory 
 /plugin install ralph-loop
 
 
+
+#--------------------
+# run
+#--------------------
+
+# NOTE !!! evaluate the risk before doing below
+#          (auto allow all cmd run by claude)
+claude --dangerously-skip-permissions
+
+
 #--------------------
 # cmd
 #--------------------
