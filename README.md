@@ -53,6 +53,12 @@ Build a web UI API for Receipt.
 ralph-loop:ralph-loop make the UI more fancy, use white + red brown, redesign
 ```
 
+## Ref
+
+- https://www.youtube.com/watch?v=T8nQSFXvoLA
+
+
+
 ## Features
 
 - ✨ Create, read, update, and delete receipts
