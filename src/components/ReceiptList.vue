@@ -12,13 +12,19 @@
     </div>
 
     <div class="actions-bar">
-      <input
-        v-model="searchQuery"
-        type="text"
-        placeholder="Search receipts..."
-        style="max-width: 300px"
-      />
-      <button @click="$emit('add-receipt')">+ Add Receipt</button>
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          v-model="searchQuery"
+          type="text"
+          placeholder="Search receipts..."
+          class="search-input"
+        />
+      </div>
+      <button class="add-receipt-btn" @click="$emit('add-receipt')">
+        <span class="btn-icon">+</span>
+        Add Receipt
+      </button>
     </div>
 
     <div v-if="filteredReceipts.length === 0" class="empty-state">

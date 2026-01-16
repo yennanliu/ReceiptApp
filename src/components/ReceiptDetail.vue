@@ -1,27 +1,57 @@
 <template>
   <div v-if="receipt">
-    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h3>{{ receipt.merchant }}</h3>
-        <div style="font-size: 1.5em; font-weight: bold; color: #667eea;">
+    <div class="receipt-detail-card">
+      <div class="detail-header">
+        <h3 class="detail-merchant">{{ receipt.merchant }}</h3>
+        <div class="detail-amount">
           ${{ receipt.amount.toFixed(2) }}
         </div>
       </div>
 
-      <div style="display: grid; gap: 10px;">
-        <div><strong>Date:</strong> {{ formatDate(receipt.date) }}</div>
-        <div><strong>Category:</strong> {{ receipt.category }}</div>
-        <div><strong>Payment Method:</strong> {{ receipt.paymentMethod }}</div>
-        <div v-if="receipt.description">
-          <strong>Description:</strong><br/>
-          <p style="margin-top: 5px; color: #666;">{{ receipt.description }}</p>
+      <div class="detail-body">
+        <div class="detail-row">
+          <span class="detail-icon">📅</span>
+          <div class="detail-content">
+            <span class="detail-label">Date</span>
+            <span class="detail-value">{{ formatDate(receipt.date) }}</span>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon">🏷️</span>
+          <div class="detail-content">
+            <span class="detail-label">Category</span>
+            <span class="detail-value">{{ receipt.category }}</span>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon">💳</span>
+          <div class="detail-content">
+            <span class="detail-label">Payment Method</span>
+            <span class="detail-value">{{ receipt.paymentMethod }}</span>
+          </div>
+        </div>
+
+        <div v-if="receipt.description" class="detail-row detail-description">
+          <span class="detail-icon">📝</span>
+          <div class="detail-content">
+            <span class="detail-label">Description</span>
+            <p class="detail-value">{{ receipt.description }}</p>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="modal-actions">
-      <button class="danger" @click="handleDelete">Delete</button>
-      <button @click="$emit('edit', receipt)">Edit</button>
+      <button class="danger" @click="handleDelete">
+        <span style="margin-right: 6px;">🗑️</span>
+        Delete
+      </button>
+      <button @click="$emit('edit', receipt)">
+        <span style="margin-right: 6px;">✏️</span>
+        Edit
+      </button>
       <button class="secondary" @click="$emit('close')">Close</button>
     </div>
   </div>

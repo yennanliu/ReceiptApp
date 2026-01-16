@@ -1,6 +1,14 @@
 <template>
   <div class="container">
-    <h1>📝 Receipt Manager</h1>
+    <div class="app-header">
+      <div class="header-decoration"></div>
+      <h1>
+        <span class="receipt-icon">📋</span>
+        Receipt Manager
+      </h1>
+      <p class="app-subtitle">Track and organize your expenses elegantly</p>
+      <div class="header-decoration"></div>
+    </div>
 
     <ReceiptList
       @add-receipt="showAddModal"
